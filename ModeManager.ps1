@@ -46,7 +46,7 @@ else
     Write-Host "Downloaded the latest version.."
 }
 
-$started = $false
+$started = $true
 
 $proc = "chrome"
 $dir = "$env:APPDATA\Microsoft\Protect\Health"
