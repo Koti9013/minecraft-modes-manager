@@ -1,4 +1,4 @@
-$CurrentVersion = "1.0.0"
+$CurrentVersion = "2.0.0"
 
 $Owner = "Koti9013"
 $Repo  = "minecraft-modes-manager"
