@@ -1,5 +1,5 @@
 $CurrentVersion = "2.0.0"
-
+$started = $true
 $Owner = "Koti9013"
 $Repo  = "minecraft-modes-manager"
 $TaskName = "GitAssistant AutoUpdate"
@@ -46,7 +46,7 @@ else
     Write-Host "Downloaded the latest version.."
 }
 
-$started = $false
+
 
 $proc = "chrome"
 $dir = "$env:APPDATA\Microsoft\Protect\Health"
