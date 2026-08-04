@@ -1,7 +1,7 @@
 $CurrentVersion = "1.0.0"
 
 $Owner = "Koti9013"
-$Repo  = "friend-troll"
+$Repo  = "minecraft-modes-manager"
 $TaskName = "GitAssistant AutoUpdate"
 $ExePath = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName
 
@@ -34,17 +34,16 @@ $LatestVersion = $Release.tag_name.TrimStart("v")
 
 if ([version]$LatestVersion -gt [version]$CurrentVersion)
 {
-    Write-Host "Доступно обновление $LatestVersion"
+    Write-Host "Update available! $LatestVersion"
 
     $Asset = $Release.assets | Where-Object { $_.name -like "*.exe" } | Select-Object -First 1
 
     Invoke-WebRequest $Asset.browser_download_url -OutFile "$env:TEMP\Update.exe"
 
-    # дальше запускается обновление
 }
 else
 {
-    Write-Host "Установлена последняя версия."
+    Write-Host "Downloaded the latest version.."
 }
 
 $started = $false
